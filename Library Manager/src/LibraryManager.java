@@ -4,10 +4,11 @@ import java.util.Scanner;
  */
 public class LibraryManager {
 	public static void main(String[] args) throws InterruptedException {
+		Menu.mainmenu();
 		//
     int num;
 	do {
-    	Menu.mainmenu();
+
 		Scanner scanner = new Scanner(System.in);
 		num= scanner.nextInt();
 		switch (num) {

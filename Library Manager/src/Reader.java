@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Reader extends People {
+class Reader{
 	private String name;
 	private String no;
 	private String major;
@@ -51,11 +51,6 @@ class Reader extends People {
 		} else {
 			System.out.println("还书失败,查不到借阅信息");
 		}
-	}
-
-	public void printall() {
-		Library libr1 = new Library();
-		super.selectAllBook(libr1);
 	}
 
 	public void printbook() {
