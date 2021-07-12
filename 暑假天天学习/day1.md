@@ -69,3 +69,13 @@ public
 
 
 
+## javadoc解释文档 
+
+---
+
+
+
+**生成javadoc文件  **
+
+**javadoc -encoding UTF-8 -charset UTF-8 XXX.java *** 
+
