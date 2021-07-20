@@ -43,7 +43,39 @@ https://blog.csdn.net/weixin_44881854/article/details/114108061
 
 https://blog.csdn.net/qq_38452037/article/details/103541185
 
-## 3.
+## 3.时间类
+
+https://www.cnblogs.com/gu-bin/p/10022703.html
+
+### SimpleDateFormat类
 
 
+
+#### 1.  date--->String
+
+```java
+public class main {
+    public static void main(String[] args) throws ParseException {
+     Date date=new Date();
+SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
+       System.out.println(DateFormat.format(date));
+    }
+    }
+```
+
+#### 2.String--->date
+
+```java
+public class main {
+    public static void main(String[] args) throws ParseException {
+     String time ="2021-07-19";
+    SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd");
+ System.out.println(SimpleDateFormat.parse(time));
+    }
+    }
+```
+
+ 	### Calendar类
+
+http://www.itcdns.cn/skill/detail/material_1574331638145
 
