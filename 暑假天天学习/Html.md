@@ -1,4 +1,4 @@
-# Html 
+# Html
 
 ## 基本标签
 
@@ -169,10 +169,70 @@ alt -- 图像显示不出来就显示alt的名字
     <li>前端</li>
     <li>py</li>
 </ol>
-
-
-
-
-
 ### 3.自定义列表
+
+```
+<!--
+自定义列表
+dl:标签
+dt:列表名称
+dd:列表内容
+一般用在网页底部
+
+-->
+<dl>
+    <dt>学科</dt>
+    <dd>java</dd>
+    <dd>cpp</dd>
+    <hr>
+    <dt>位置</dt>
+    <dd>中山</dd>
+</dl>
+```
+
+## 媒体元素
+
+### 音频文件
+
+```
+<audio src="../rec/audio/陈小春%20-%20我不是伟人.mp3" controls  autoplay></audio>
+```
+
+### 视频文件
+
+```
+<!--<video src="../rec/video/《我不是伟人》%20陈小春(超清).mp4" controls autoplay></video>-->
+```
+
+controls 打开控制台，供人拖动进度
+
+autoplay 自动播放
+
+## 页面结构
+
+![image-20210729210741096](https://gitee.com/moon-force/picgo/raw/master/img/image-20210729210741096.png)
+
+
+
+
+
+
+
+
+
+
+
+## iframe内联框架
+
+```
+<iframe src="https://www.bilibili.com/video/BV1x4411V75C?p=11" frameborder="0" width="1000px" height="800px"></iframe>
+```
+
+在网页中镶嵌一个新网页
+
+![image-20210729164727683](C:\Users\tao\AppData\Roaming\Typora\typora-user-images\image-20210729164727683.png)
+
+id 要改成name
+
+name 代表框架名
 
