@@ -156,10 +156,15 @@ alt -- 图像显示不出来就显示alt的名字
 
 ### 1.无序列表
 
-```
 
-```
-
+<!--无序列表-->Unordered List
+<ul>
+    <li>java</li>
+    <li>cpp</li>
+    <li>运维</li>
+    <li>前端</li>
+    <li>py</li>
+</ul>
 ### 2.有序列表
 
 <ol>
@@ -212,13 +217,26 @@ autoplay 自动播放
 
 ![image-20210729210741096](https://gitee.com/moon-force/picgo/raw/master/img/image-20210729210741096.png)
 
-
-
-
-
-
-
-
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+  <h2>网页头部</h2>
+</header>
+<section>
+    网页主体
+</section>
+<footer>
+    <h2>网页底部</h2>
+</footer>
+</body>
+</html>
+```
 
 
 
@@ -235,4 +253,108 @@ autoplay 自动播放
 id 要改成name
 
 name 代表框架名
+
+在name框架中打开一个新网页
+
+## 表单语法 <form>标签
+
+### 文本框
+
+**<input type="text" name="username">**
+
+### 密码框
+
+<input type="password" name="pwd">
+
+### 单选框
+
+```
+    <!--
+type=radio 单选框
+value 提交的值
+name 组别
+-->
+```
+
+<input type="radio"  value="boy" name="sex"> 男
+
+<input type="radio" value="girl" name="sex">女
+
+name是组别，如果组别不同则可以多选![image-20210730020717945](https://gitee.com/moon-force/picgo/raw/master/img/image-20210730020717945.png)
+
+**所以单选框必须保持name一致**
+
+### 多选框
+
+爱好
+    <input type="checkbox" value="sleep" name="hobby">睡觉
+    <input type="checkbox" value="game" name="hobby">游戏
+    <input type="checkbox" value="eat" name="hobby">吃饭
+
+### 按钮
+
+input type="button"普通按钮
+
+input type="image" 图像按钮
+
+input type="submit" 提交按钮
+
+input type="reset" 重置按钮
+
+```
+<!-- 按钮   -->
+<p>
+        <input type="button" name="but1" value="点击"/>
+</p>
+<!--  图片按钮-->
+<p>
+        <input type="image" src="../rec/img/1.PNG" height="651" width="835"/>
+</p>
+```
+
+### 下拉框
+
+```
+<!--下拉框
+列表框
+selected 默认选中
+-->
+```
+
+<select name="国家">
+    <option value="usa">美国</option>
+    <option value="china" selected>中国</option>
+</select>
+
+### 文本域
+
+<textarea name="textarea" row="10" cols="50"></textarea>
+
+### 文件域
+
+<input type="file" name="照片属性">
+
+### 邮箱验证
+
+<input type="email" name="email" >
+
+### url 
+
+<input type="url" name="url">
+
+### 数字
+
+<input type="number" name="number" max="100" min="0" step="10">
+
+step进位
+
+### 滑块
+
+<input type="range" name="voice" min="0" max="100" step="2">
+
+### 搜索框
+
+<input type="search" name="search">
+
+
 

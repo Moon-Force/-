@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆界面</title>
+</head>
+<body>
+<h1>注册</h1>
+<!--表单form
+action : 表单提交的位置，可以是网站，也可以是一个地址
+method:post get方法
+-->
+
+<form action="1.helloworld.html" method="get">
+<!-- 文本框  -->
+    <p>名字: <input type="text" name="username"></p>
+<!-- 密码框   -->
+    <p>密码:<input type="password" name="pwd"></p>
+    <hr>
+    <!--
+type=radio 单选框
+value 提交的值
+name 组别
+-->
+ <p>
+    <input type="radio" value="boy" name="sex">男
+    <input type="radio" value="girl" name="sex1">女
+ </p>
+<!-- 多选框
+   input type="checkbox"
+   checked默认选中
+   -->
+
+<p>爱好
+    <input type="checkbox" value="sleep" name="hobby">睡觉
+    <input type="checkbox" value="game" name="hobby">游戏
+    <input type="checkbox" value="eat" name="hobby">吃饭
+</p>
+<!-- 按钮   -->
+<p>
+        <input type="button" name="but1" value="点击"/>
+</p>
+<!--  图片按钮-->
+<p>
+        <input type="image" src="../rec/img/1.PNG" height="651" width="835"/>
+</p>
+<!--下拉框
+列表框
+selected 默认选中
+-->
+    <p>国家:</p>
+    <p>
+        <select name="列表名称">
+            <option value="选项值">china</option>
+            <option value="选项值">india</option>
+            <option value="选项值" selected>usa</option>
+            <option value="选项值">switzerland</option>
+        </select>
+    </p>
+<!--反馈文本域-->
+    <p>反馈
+        <textarea name="textarea" rows="10" cols="50"></textarea>
+    </p>
+<!--    文件域
+ <input type="file" name="照片属性">
+-->
+    <p>
+        <input type="file" name="照片属性">
+    </p>
+<!--邮件验证-->
+    <p>邮箱:
+        <input type="email" name="email">
+    </p>
+<!--url    -->
+    <p>url:
+        <input type="url" name="url">
+    </p>
+<!--数字  -->
+    <p>数字
+        <input type="number" name="number" max="100" min="0" >
+    </p>
+<!--滑块-->
+    <p>
+        <input type="range" name="voice" min="0" max="100" step="2">
+    </p>
+<!--搜索框-->
+    <p>搜索
+        <input type="search" name="search">
+    </p>
+    <p>
+        <input type="submit" value="提交">
+        <input type="reset" value="清空表单">
+    </p>
+</form>
+</body>
+</html>
