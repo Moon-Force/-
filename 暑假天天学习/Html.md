@@ -156,8 +156,8 @@ alt -- 图像显示不出来就显示alt的名字
 
 ### 1.无序列表
 
-
 <!--无序列表-->Unordered List
+
 <ul>
     <li>java</li>
     <li>cpp</li>
@@ -194,6 +194,21 @@ dd:列表内容
     <dd>中山</dd>
 </dl>
 ```
+
+## 表格
+
+<table>
+    <tr>
+     <td>1.1</td>
+     <td>1.2</td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2.2</td>
+    </tr>
+</table>
+
+
 
 ## 媒体元素
 
@@ -325,7 +340,6 @@ selected 默认选中
     <option value="usa">美国</option>
     <option value="china" selected>中国</option>
 </select>
-
 ### 文本域
 
 <textarea name="textarea" row="10" cols="50"></textarea>
@@ -356,5 +370,41 @@ step进位
 
 <input type="search" name="search">
 
+### 表单的应用
 
+```
+disabled 禁用
+```
 
+```
+readonly 只读
+```
+
+```
+hidden隐藏
+```
+
+## 表单的初级验证
+
+### 1.placeholder
+
+==提示词==
+
+![image-20210730151633468](https://gitee.com/moon-force/picgo/raw/master/img/image-20210730151633468.png)
+
+### 2.required
+
+==不能为空==
+
+![image-20210730151822917](https://gitee.com/moon-force/picgo/raw/master/img/image-20210730151822917.png)
+
+### 3.pattern
+
+正则表达式
+
+```
+<p>邮箱:
+    <input type="text" name="diymail" pattern="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+
+</p>
+```

@@ -10,20 +10,29 @@
 action : 表单提交的位置，可以是网站，也可以是一个地址
 method:post get方法
 -->
-
+scanner
 <form action="1.helloworld.html" method="get">
-<!-- 文本框  -->
-    <p>名字: <input type="text" name="username"></p>
-<!-- 密码框   -->
-    <p>密码:<input type="password" name="pwd"></p>
+<!-- 文本框
+readonly 只读
+placeholder 提示词
+required 非空判断
+-->
+<!--    <p>名字: <input type="text" name="username" value="tao" readonly></p>-->
+    <p>名字: <input type="text" name="username" placeholder="请输入用户名" required></p>
+<!-- 密码框
+  hidden隐藏
+
+  -->
+    <p>密码:<input type="password" name="pwd" hidden></p>
     <hr>
     <!--
 type=radio 单选框
 value 提交的值
 name 组别
+disabled 禁用
 -->
  <p>
-    <input type="radio" value="boy" name="sex">男
+    <input type="radio" value="boy" name="sex" disabled>男
     <input type="radio" value="girl" name="sex1">女
  </p>
 <!-- 多选框
@@ -87,8 +96,20 @@ selected 默认选中
     <p>搜索
         <input type="search" name="search">
     </p>
+<!-- label标签-->
     <p>
-        <input type="submit" value="提交">
+        <label for="mark">点我试试</label>
+        <input type="text" id="mark">
+    </p>
+<!--pattern
+正则表达式
+-->
+<p>邮箱:
+    <input type="text" name="diymail" pattern="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+
+</p>
+    <p>
+        <input type="submit" value="提交" >
         <input type="reset" value="清空表单">
     </p>
 </form>
