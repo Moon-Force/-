@@ -2,6 +2,11 @@
 
 ## 基本标签
 
+1. ` <body bgcolor="yellow">背景为黄色`
+2. `        <h1 align="center">这是一个一级标题</h1>` align文字居中
+3. `        <p>这是第1个段落。</p>`
+4. `        <p>这是第2个段落。</p>`
+
 ### 自闭合标签
 
 | 标签      | 说明                             |
@@ -74,6 +79,30 @@ hello world!
 <br>
 
 ### 字体样式标签
+
+#### HTML 样式实例 - 字体、颜色和尺寸
+
+```html
+<html>
+  <body>
+    <p style="font-family:arial;color:green;font-size:50px;">实验楼</p>
+  </body>
+</html>
+```
+
+注：通过对 `font-family` 属性值的设置来设置字体，通过对 `color` 属性值的设置来设置颜色，通过对 `font-size` 属性值的设计来设计字体大小。
+
+![img](https://doc.shiyanlou.com/courses/1552/1226977/1a328adb0ea3c657455bf2a03b601720-0)
+
+#### HTML 样式实例 - 文本对齐
+
+```html
+<html>
+  <body>
+    <h1 style="text-align:center">实验楼</h1>
+  </body>
+</html>
+```
 
 | <strong>我爱你</strong> 粗体 | 看源代码 |
 | ---- | ------------------ |
@@ -154,6 +183,8 @@ alt -- 图像显示不出来就显示alt的名字
 
 ## 列表标签
 
+
+
 ### 1.无序列表
 
 <!--无序列表-->Unordered List
@@ -174,6 +205,48 @@ alt -- 图像显示不出来就显示alt的名字
     <li>前端</li>
     <li>py</li>
 </ol>
+**无序列表和有序列表的 type 属性：**
+
+type 属性定义了列表项前项目符号的类型。
+
+`<ul>` 标签的 type 属性：
+
+| 值           | 备注   |
+| ------------ | ------ |
+| disc（默认） | 实心圆 |
+| circle       | 空心圆 |
+| square       | 小方块 |
+
+`<ol>` 标签的 type 属性：
+
+| 值        | 备注                        |
+| --------- | --------------------------- |
+| 1（默认） | 数字表示（1，2，3...)       |
+| A         | 大写字母表示（A,B,C...)     |
+| a         | 小写字母表示（a,b,c...)     |
+| I         | 大写罗马数字表示(I,II,III…) |
+| i         | 小写罗马数字表示(i,ii,iii…) |
+
+我们来看其中一两个 type 属性：
+
+```html
+<p>无序列表</p>
+<ul type="circle">
+  <li>空心圆列表项1</li>
+  <li>空心圆列表项2</li>
+</ul>
+
+<p>有序列表</p>
+<ol type="A">
+  <li>列表项1</li>
+  <li>列表项2</li>
+</ol>
+```
+
+![img](https://doc.shiyanlou.com/courses/1552/1226977/1feaa73cb508751fc4f8744d63144266-0)
+
+
+
 ### 3.自定义列表
 
 ```
@@ -272,6 +345,15 @@ name 代表框架名
 在name框架中打开一个新网页
 
 ## 表单语法 <form>标签
+
+```
+<!--表单form
+action : 表单提交的位置，可以是网站，也可以是一个地址
+method:post get方法
+-->
+scanner
+<form action="1.helloworld.html" method="get">
+```
 
 ### 文本框
 
