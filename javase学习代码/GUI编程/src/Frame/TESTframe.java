@@ -1,6 +1,9 @@
 package Frame;
 
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class TESTframe {
     public static void main(String[] args) {
@@ -15,5 +18,48 @@ public class TESTframe {
         frame.setLocation(200,200);
 //      设置大小固定
         frame.setResizable(false);
+      frame.addWindowListener(new WindowAdapter() {
+          @Override
+          public void windowClosing(WindowEvent e) {
+              System.exit(0);
+          }
+      });
+//        frame.addWindowListener(new WindowListener() {
+//            @Override
+//            public void windowOpened(WindowEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void windowClosing(WindowEvent e) {
+//      System.exit(0);
+//            }
+//
+//            @Override
+//            public void windowClosed(WindowEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void windowIconified(WindowEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void windowDeiconified(WindowEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void windowActivated(WindowEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void windowDeactivated(WindowEvent e) {
+//
+//            }
+//        });
+
     }
 }
