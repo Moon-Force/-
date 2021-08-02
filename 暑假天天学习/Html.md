@@ -280,6 +280,8 @@ dd:列表内容
       <td>2.2</td>
     </tr>
 </table>
+![1](https://doc.shiyanlou.com/document-uid897174labid9222timestamp1545370661694.png)
+
 
 
 
@@ -490,3 +492,134 @@ hidden隐藏
 
 </p>
 ```
+
+## HTML5 Canvas API
+
+### 直线绘制
+
+
+
+~~~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="MyCanvas" width="1314px" height="1314px" style="background-color: black">
+</canvas>
+<script type="text/javascript">
+    var Mycanvas=document.getElementById("MyCanvas");
+    var pen=Mycanvas.getContext("2d");
+    pen.beginPath();
+    pen.moveTo(20,20);
+    pen.lineTo(200,700);
+    pen.moveTo(20,20);
+    pen.lineTo(200,20);
+    pen.lineWidth=3.0;
+    pen.strokeStyle="blue";
+    pen.stroke();
+</script>
+</body>
+~~~</html>
+~~~
+
+### 矩形绘制
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="MyCanvas" width="520px" height="1314px">
+
+</canvas>
+<script type="text/javascript">
+    var canvas=document.getElementById("MyCanvas");
+    var pen=canvas.getContext("2d");
+    pen.rect(10,10,100,100);
+    pen.strokeStyle="blue";
+    // pen.strokeRect(10, 10, 100, 200);一样效果
+    pen.stroke();
+    //实心
+    pen.fillRect(100,100,100,100);
+
+
+</script>
+</body>
+</html>
+```
+
+### 圆的绘制
+
+使用 arc() 方法绘制圆或者椭圆。语法为：
+
+**ctx.arc(x, y, r, sAngle, eAngle, counterclockwise);**
+**copy**
+参数说明：
+
+x 表示圆的中心的 x 坐标。
+
+y 表示圆的中心的 y 坐标。
+
+r 表示圆的半径。
+
+sAngle 表示起始角，以弧度计（特别需要注意的是弧的圆形的三点钟位置是 0 度而不是常规以为的 90 度）。
+
+eAngle 表示结束角，以弧度计。
+
+counterclockwise 表示绘制圆的方向，值为 false 表示顺时针，为 true 表示逆时针。是一个可选值，默认值是 false。
+
+~~~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆的绘制</title>
+</head>
+<body>
+<canvas id="MyCanvas" height="1000px" width="1000px">
+</canvas>
+<script type="text/javascript">
+    var myCanvas=document.getElementById("MyCanvas");
+    var pen=myCanvas.getContext("2d");
+    pen.beginPath();
+
+    //PI=3.14=180°
+    //所以PI*2=360°
+    pen.arc(100,75,50,0,Math.PI*2);
+    pen.stroke();
+</script>
+</body>
+~~~</html>
+~~~
+
+### 渐变色
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变色</title>
+</head>
+<body>
+<canvas id="mycanvas" width="1314px" height="1314px">
+</canvas>
+<script type="text/javascript">
+    var MyCanvas=document.getElementById("mycanvas");
+    var pen=MyCanvas.getContext("2d");
+    var gradient =pen.createLinearGradient(0,0,170,0);
+    gradient.addColorStop(0,"red");
+    gradient.addColorStop("0.25","black");
+    gradient.addColorStop("0.5","green");
+    gradient.addColorStop(1,"black");
+    pen.fillStyle=gradient;
+    pen.fillRect(10,10,100,200);
+</script>
+</body>
+</html>
+```
+

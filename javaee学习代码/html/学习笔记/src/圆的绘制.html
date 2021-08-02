@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆的绘制</title>
+</head>
+<body>
+<canvas id="MyCanvas" height="1000px" width="1000px">
+</canvas>
+<script type="text/javascript">
+    var myCanvas=document.getElementById("MyCanvas");
+    var pen=myCanvas.getContext("2d");
+    pen.beginPath();
+    
+    //PI=3.14=180°
+    //所以PI*2=360°
+    pen.arc(100,75,50,0,Math.PI*2);
+    pen.stroke();
+</script>
+</body>
+</html>

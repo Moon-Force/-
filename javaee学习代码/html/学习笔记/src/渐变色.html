@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变色</title>
+</head>
+<body>
+<canvas id="mycanvas" width="1314px" height="1314px">
+</canvas>
+<script type="text/javascript">
+    var MyCanvas=document.getElementById("mycanvas");
+    var pen=MyCanvas.getContext("2d");
+   var gradcolor=pen.createLinearGradient(0,0,170,0);
+    gradient.addColorStop(0,"red");
+    gradient.addColorStop("0.25","black");
+    gradient.addColorStop("0.5","green");
+    gradient.addColorStop(1,"black");
+    pen.fillStyle=gradient;
+    pen.fillRect(10,10,100,200);
+</script>
+</body>
+</html>

@@ -66,6 +66,16 @@ selected 默认选中
             <option value="选项值">switzerland</option>
         </select>
     </p>
+<!--滑动框
+size="2" 表示一次显示 2 条数据。-->
+  <p>
+   <select name="select" size="2" multiple="multiple">
+        <option value="成都">成都</option>
+        <option value="广州">广州 </option>
+        <option value="四川">四川</option>
+        <option value="上海">上海</option>
+    </select>
+   </p>
 <!--反馈文本域-->
     <p>反馈
         <textarea name="textarea" rows="10" cols="50"></textarea>
@@ -96,7 +106,8 @@ selected 默认选中
     <p>搜索
         <input type="search" name="search">
     </p>
-<!-- label标签-->
+<!-- label标签
+指向输入框-->
     <p>
         <label for="mark">点我试试</label>
         <input type="text" id="mark">

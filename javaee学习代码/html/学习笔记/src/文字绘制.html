@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="mycanvas"
+        width="520px"
+        height="1314px">
+</canvas>
+<script type="text/javascript">{
+    var Canvas=document.getElementById("mycanvas");
+    var ctx=Canvas.getContext("2d");
+    // ctx.fillText("hello",10,50);实心字
+    ctx.font = '20px Georgia';
+    //值为start的情况
+    ctx.textAlign = 'start';
+    ctx.strokeText('Hello Syl!', 200, 20);
+    //值为center的情况
+    ctx.textAlign = 'center';
+    ctx.strokeText('Hello Syl!', 200, 60);
+    //值为end的情况
+    ctx.textAlign = 'end';
+    ctx.strokeText('Hello Syl!', 200, 100);
+    //值为left的情况
+    ctx.textAlign = 'left';
+    ctx.strokeText('Hello Syl!', 200, 140);
+    //值为right的情况
+    ctx.textAlign = 'right';
+    ctx.strokeText('Hello Syl!', 200, 180);
+}</script>
+</body>
+</html>

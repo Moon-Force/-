@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="MyCanvas" width="1314px" height="1314px" style="background-color: black">
+</canvas>
+<script type="text/javascript">
+    var Mycanvas=document.getElementById("MyCanvas");
+    var pen=Mycanvas.getContext("2d");
+    pen.beginPath();
+    pen.moveTo(20,20);
+    pen.lineTo(200,700);
+    pen.moveTo(20,20);
+    pen.lineTo(200,20);
+    pen.lineWidth=3.0;
+    pen.strokeStyle="blue";
+    pen.stroke();
+</script>
+</body>
+</html>
