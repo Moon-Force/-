@@ -11,7 +11,6 @@ public class OutputStream {
         byte[] bytes=new byte[500];
         bytes=str.getBytes();
 //       bufferedOutputStream.writr(bytes);¸ü¿ìËÙ
-
         out.write(bytes);
     }
 }
