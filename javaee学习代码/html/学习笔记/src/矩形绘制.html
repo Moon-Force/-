@@ -5,20 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="MyCanvas" width="520px" height="1314px">
+<canvas id="MyCanvas" width="1000x" height="1314px">
 
 </canvas>
 <script type="text/javascript">
     var canvas=document.getElementById("MyCanvas");
     var pen=canvas.getContext("2d");
-    pen.rect(10,10,100,100);
     pen.strokeStyle="blue";
-    // pen.strokeRect(10, 10, 100, 200);一样效果
+    pen.rect(100,100,500,600);
     pen.stroke();
-    //实心
-    pen.fillRect(100,100,100,100);
-
-
 </script>
 </body>
 </html>

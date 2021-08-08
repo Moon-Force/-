@@ -309,25 +309,316 @@ class actionListener implements ActionListener {
 }
 ```
 
-## 简易计算器
+## 画笔
 
 ```
-      Operation operation;
-        String op;
-        Scanner scanner=new Scanner(System.in);
-//
-        System.out.println("输入a");
-        double a=scanner.nextDouble();
-//
-        System.out.println("输入符号");
-        op=scanner.next();
-//
-        System.out.println("输入b");
-        double b=scanner.nextDouble();
-//
-        operation= OpFactory.creatOp(op);
-        //子类可以调用父类方法，所以当 operation= OpFactory.creatOp(op)后，还能使用operation的setNUMA方法
-        operation.setNumA(a);
-        operation.setNumB(b);
-        System.out.println(operation.getresult());
+import java.awt.*;
+
+public class paint {
+    public static void main(String[] args) {
+     new Mypaint().LoadFrame();
+    }
+}
+class Mypaint extends Frame{
+    public void LoadFrame(){
+        setVisible(true);
+        setBounds(100,100,1000,1000);
+    }
+    public void paint(Graphics g){
+        g.setColor(Color.red);
+        g.fillOval(100,100,100,100);
+        g.fillRect(300,300,300,300);
+    }
+
+}
 ```
+
+为什么只调用了loadframe就会一起调用paint方法
+
+```java
+package 鼠标监听事件;
+
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class 画笔鼠标监听 {
+    public static void main(String[] args) {
+   new MyFrame("1");
+    }
+}
+class MyFrame extends Frame{
+    ArrayList PointarrayList;
+    public MyFrame(String title){
+        super(title);
+        PointarrayList = new ArrayList<>();
+        setVisible(true);
+        setBounds(0,0,1000,1000);
+        this.addMouseListener(new Mouaction());
+        windowClosing.closing(this);
+    }
+    private class Mouaction extends MouseAdapter{
+        @Override
+        public void mousePressed(MouseEvent e) {
+            MyFrame MyFrame=(MyFrame)e.getSource();
+           PointarrayList.add(new Point(e.getX(),e.getY()));
+           MyFrame.repaint();
+        }
+    }
+
+
+    @Override
+    public void paint(Graphics g) {
+        Iterator Iterator=PointarrayList.iterator();
+        while(Iterator.hasNext()){
+            Point point= (Point) Iterator.next();
+            g.setColor(Color.GREEN);
+            g.fillOval(point.x,point.y,10,10);
+        }
+    }
+    private class windowClosing{
+        private static void closing(Frame frame){
+            frame.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowClosing(WindowEvent e) {
+                    System.exit(0);
+                }
+            });
+        }
+    }
+}
+
+```
+
+## 键盘监听器
+
+```
+import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+public class 键盘监听 {
+     public static void main(String[] args) {
+          new KeyFrame();
+     }
+}
+class  KeyFrame extends Frame{
+     public KeyFrame(){
+          setVisible(true);
+          setBounds(100,100,500,500);
+          addKeyListener(new KeyAdapter() {
+               @Override
+               public void keyPressed(KeyEvent e) {
+                    int kbcode=e.getKeyCode();
+                    if(kbcode==KeyEvent.VK_UP){
+                         System.out.println("up");
+                    }
+               }
+          });
+          addWindowListener(new WindowAdapter() {
+               @Override
+               public void windowClosing(WindowEvent e) {
+                    System.exit(0);
+               }
+          });
+     }
+}
+```
+
+## 弹窗
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Dialogdemo extends JFrame {
+     public Dialogdemo(){
+          setVisible(true);
+          setSize(700,500);
+          Container container=this.getContentPane();
+//          绝对布局
+          container.setLayout(null);
+//          按钮
+          setDefaultCloseOperation(EXIT_ON_CLOSE);
+          JButton jButton = new JButton("点击弹出对话框");
+          jButton.setBounds(30,30,200,200);
+          jButton.addActionListener(new ActionListener() {
+               @Override
+               public void actionPerformed(ActionEvent e) {
+               new  Dialogdemo1();
+               }
+          });
+          container.add(jButton);
+     }
+
+     public static void main(String[] args) {
+           new Dialogdemo();
+     }
+}
+class Dialogdemo1 extends JDialog{
+     public Dialogdemo1(){
+          setVisible(true);
+          setBounds(100,100,500,500);
+          Container container=this.getContentPane();
+          container.setLayout(null);
+          container.add(new Label("666"));
+     }
+}
+```
+
+## Icon图标显示
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+class IconDemo extends JFrame implements  Icon {
+    private  int width;
+    private  int height;
+    public IconDemo(){}
+    public IconDemo(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
+    public void init(){
+        IconDemo icon = new IconDemo(100,200);
+        JLabel label=new JLabel("icontest",icon,SwingConstants.CENTER);
+        Container container=getContentPane();
+        container.add(label);
+        setVisible(true);
+        setBounds(100,100,500,500);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+           new IconDemo().init();
+    }
+    @Override
+    public void paintIcon(Component c, Graphics g, int x, int y) {
+          g.fillOval(x,y,width,height);
+    }
+
+    @Override
+    public int getIconWidth() {
+        return width;
+    }
+
+    @Override
+    public int getIconHeight() {
+        return height;
+    }
+}
+```
+
+## 文本域滑动面板
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+class JScrolldemo extends JFrame {
+     public  JScrolldemo(){
+         Container container=this.getContentPane();
+
+         JTextArea textArea=new JTextArea(50,50);
+         textArea.setText("欢迎学习");
+         JScrollPane scrollPane=new JScrollPane(textArea);
+         container.add(scrollPane);
+         this.setVisible(true);
+         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+         this.setBounds(100,100,300,500);
+     }
+
+    public static void main(String[] args) {
+        new JScrolldemo();
+    }
+}
+```
+
+## 图片按钮 
+
+```
+package 图片按钮;
+
+import javax.swing.*;
+import java.awt.*;
+import java.net.URL;
+
+class JButton1 extends JFrame {
+    public  JButton1(){
+        Container container=this.getContentPane();
+        URL url=JButton1.class.getResource("gg.png");
+        Icon icon=new ImageIcon(url);
+        JButton button=new JButton();
+        button.setIcon(icon);
+        button.setToolTipText("图片按钮");
+        container.add(button);
+        this.setVisible(true);
+        this.setBounds(100,100,600,600);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new JButton1();
+    }
+}
+```
+
+## 单选框
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+class RadioButtonTest extends JFrame {
+    public  RadioButtonTest(){
+        Container container=this.getContentPane();
+        JRadioButton radioButton=new JRadioButton("radiobut");
+        JRadioButton radioButton1=new JRadioButton("radiobut1");
+        ButtonGroup group =new ButtonGroup();
+        group.add(radioButton);
+        group.add(radioButton1);
+        container.add(radioButton,BorderLayout.WEST);
+        container.add(radioButton1,BorderLayout.SOUTH);
+        setVisible(true);
+        setBounds(100,100,500,500);
+
+    }
+
+    public static void main(String[] args) {
+        new RadioButtonTest();
+    }
+}
+```
+
+## 多选框
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+public class checkboxtest extends JFrame {
+    public checkboxtest(){
+        Container container=this.getContentPane();
+        Checkbox checkbox=new Checkbox("1");
+        Checkbox checkbox1=new Checkbox("2");
+        container.add(checkbox1,BorderLayout.WEST);
+        container.add(checkbox,BorderLayout.SOUTH);
+        setVisible(true);
+        setBounds(100,100,500,600);
+    }
+
+    public static void main(String[] args) {
+        new checkboxtest();
+    }
+}
+```
+
