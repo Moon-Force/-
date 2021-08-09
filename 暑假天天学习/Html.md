@@ -375,6 +375,26 @@ name 组别
 -->
 ```
 
+单选框最好放进label中
+
+ <label for="1">
+
+   <input id="1" type="radio" name="indoor-outdoor">indoor
+
+  </label>
+
+  <label for="2">
+
+   <input id="2" type="radio" name="indoor-outdoor">outdoor
+
+  </label>
+
+
+
+------
+
+
+
 <input type="radio"  value="boy" name="sex"> 男
 
 <input type="radio" value="girl" name="sex">女

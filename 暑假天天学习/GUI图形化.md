@@ -622,3 +622,103 @@ public class checkboxtest extends JFrame {
 }
 ```
 
+## 下拉框(JComboBox)和列表框
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+public class TestComboboxDemo extends JFrame {
+    public  TestComboboxDemo(){
+        Container container=this.getContentPane();
+      JComboBox jComboBox=new JComboBox();
+      jComboBox.addItem(null);
+      jComboBox.addItem("我");
+      jComboBox.addItem("ta");
+      container.add(jComboBox,BorderLayout.WEST);
+
+//      列表框
+      JPanel jPanel = new JPanel();
+      String[] str={"1","2","3000"};
+      JList list=new JList(str);
+      jPanel.add(list);
+      container.add(jPanel,BorderLayout.SOUTH);
+      this.setVisible(true);
+      this.setBounds(0,0,500,500);
+      this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new TestComboboxDemo();
+    }
+}
+```
+
+## 文本框
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+class TestText extends JFrame {
+    public TestText(){
+        Container container=this.getContentPane();
+        JTextField TextField=new JTextField("hello");
+        JTextField TextField1=new JTextField("world",20);
+        container.add(TextField,BorderLayout.WEST);
+        container.add(TextField1,BorderLayout.SOUTH);
+        this.setVisible(true);
+        this.setBounds(20,20,500,500);
+    }
+
+    public static void main(String[] args) {
+        new TestText();
+    }
+}
+```
+
+## 密码框
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+class TestText extends JFrame {
+    public TestText(){
+        Container container=this.getContentPane();
+      JPasswordField jp=new JPasswordField();
+      jp.setEchoChar('*');
+      container.add(jp);
+        this.setVisible(true);
+        this.setBounds(20,20,500,500);
+    }
+
+    public static void main(String[] args) {
+        new TestText();
+    }
+}
+```
+
+## 文本域
+
+```
+import javax.swing.*;
+import java.awt.*;
+
+class TestText extends JFrame {
+    public TestText(){
+        Container container=this.getContentPane();
+     JTextArea ja=new JTextArea(50,500);
+     JScrollPane jscp=new JScrollPane(ja);
+
+      container.add(jscp);
+        this.setVisible(true);
+        this.setBounds(20,20,500,500);
+    }
+
+    public static void main(String[] args) {
+        new TestText();
+    }
+}
+```
+
