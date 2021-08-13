@@ -98,3 +98,57 @@ h2 {
 }
 ```
 
+# **调整元素的内边距(padding)**
+
+ .red-box {
+
+  background-color: crimson;
+
+  color: #fff;
+
+  padding: 20px;
+
+ }
+
+# **调整元素的外边距(margin)**
+
+ .red-box {
+
+  background-color: crimson;
+
+  color: #fff;
+
+  padding: 20px;
+
+  margin: 20px;
+
+ }
+
+# 加粗字体strong
+
+<p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at <strong>Stanford University.</strong></p>
+
+# **使用 u 标签给文本添加下划线**
+
+<p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at <u>Stanford University</u>.</p>
+
+# **使用 em 标签强调文本**
+
+你可以使用 `em` 标签来强调文本。 由于浏览器会自动给元素应用 `font-style: italic;`，所以文本会显示为斜体。
+
+  <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong></em>.</p>
+
+# **使用 s 标签给文本添加删除线**
+
+ <h4><s>Google</s>Alphabet</h4>
+
+# rgba()
+
+rgba 代表：
+ r = red 红色
+ g = green 绿色
+ b = blue 蓝色
+ a = alpha 透明度
+
+background-color: rgba(45, 45, 45, 0.1)
+
