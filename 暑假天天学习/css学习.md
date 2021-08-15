@@ -7,6 +7,7 @@
     1.改变文本颜色
 </h2>
 ~~~
+
 ## 2.使用元素选择器来设置元素的样式
 
 ```html
@@ -218,7 +219,7 @@ background-color: rgba(45, 45, 45, 0.1)
 
 - **设置段落的 line-height**
 
-   `line-height` 属性来设置行间的距离。 行高，顾名思义，可以用来设置每行文字所占据的垂直空间。
+  `line-height` 属性来设置行间的距离。 行高，顾名思义，可以用来设置每行文字所占据的垂直空间。
 
 ## 1.相对定位 (relative)
 
@@ -280,6 +281,70 @@ right:5px;
 
 `z-index` 的取值是整数，数值大的元素会叠放到数值小的元素上面。
 
-# **使用 margin 属性将元素水平居中**
+# 颜色描述方式hsl(）
 
-## 1.
+- ==h:色相==(Hue)
+
+  色相用色环来代替光谱，色相值就是色环里面的颜色对应的从 0 到   360 度的角度值。
+
+- ==s:饱和度==(Saturation)
+
+   色彩的纯度，越高色彩越纯，低则逐渐变灰，取0-100%的数值。
+
+- ==l:亮度==(Lightness)
+
+  取0-100
+
+   其中，100% 的亮度表示纯白色， 0% 的亮度则表示纯黑色；而 50% 的亮度就表示在色相中选取的颜色。
+
+# **CSS 线性渐变**
+
+## 1.linear-gradient()
+
+```css
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...)
+```
+
+**gradient_direction:渐变角度**
+
+## 2.repeating-linear-gradient()
+
+重复渐变
+
+![image-20210815215043212](https://gitee.com/moon-force/picgo/raw/master/img/image-20210815215043212.png)
+
+![image-20210815215107825](https://gitee.com/moon-force/picgo/raw/master/img/image-20210815215107825.png)
+
+# 网络背景图源
+
+`background` 属性支持使用 `url()` 函数作为属性值
+
+~~~
+<style>
+  body {
+    background:url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+  }
+</style>
+~~~
+
+## **Transform scale 属性可以更改元素的大小**通过
+
+```css
+p {
+  transform: scale(2);
+}
+```
+
+段落元素放大到了原来的 2 倍
+
+# **Transform skex**
+
+**沿X轴倾斜元素**
+
+ transform: skewY(-10deg);
+
+# **Transform skey**
+
+**沿Y轴倾斜元素**
+
+ transform: skewX(24deg);
