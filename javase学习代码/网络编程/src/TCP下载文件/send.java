@@ -8,29 +8,22 @@ import java.net.UnknownHostException;
 
 public class send {
     public static void main(String[] args) throws Exception {
-        Socket socket=new Socket(InetAddress.getByName("127.0.0.1"),9999);
-        OutputStream os=socket.getOutputStream();
-        try (FileInputStream fileInputStream = new FileInputStream(new File("小姐.jpg"))) {
-            int len;
-            byte[] bytes = new byte[1024];
-            while ((len = fileInputStream.read(bytes)) != -1) {
-                os.write(bytes,0, len);
-            }
-            socket.shutdownOutput();
-          InputStream inputStream = socket.getInputStream();
-          ByteArrayOutputStream baos = new ByteArrayOutputStream();
-          int len1;
-          byte[] byte2=new byte[1024];
-          while((len1=inputStream.read(byte2))!=-1){
-              baos.write(byte2,0,len1);
+         Socket socket=new Socket(InetAddress.getByName("127.0.0.1"),9999);
+          OutputStream os=socket.getOutputStream();
+         FileInputStream filein=new FileInputStream(new File("小姐.jpg"));
+          int len;
+          byte[] bytes=new byte[1024];
+          while((len=filein.read(bytes))!=-1){
+              os.write(bytes,0,len);
           }
-            System.out.println( baos.toString());
-        }catch (Exception e){
-            System.out.println("没有此文件");
-        }finally {
-            socket.close();
-            os.close();
+          socket.shutdownOutput();
+          InputStream inp=socket.getInputStream();
+          ByteArrayOutputStream baos = new ByteArrayOutputStream();
+          int len2;
+          byte[] bytes2=new byte[1024];
+          while((len2=inp.read(bytes2))!=-1){
+              baos.write(bytes2,0,len2);
+          }
+        System.out.println(baos.toString());
         }
-        }
-
 }
