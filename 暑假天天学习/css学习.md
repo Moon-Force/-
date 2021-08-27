@@ -348,3 +348,218 @@ p {
 **沿Y轴倾斜元素**
 
  transform: skewX(24deg);
+
+## **CSS 的关键帧和动画**
+
+animation-name 动画的名称
+
+animation-duration 动画的时间
+
+### `@keyframes` 可以通过设置特定时间点的行为来创建动画。
+
+```css
+#anim {
+  animation-name: colorful;
+    设置动画的名称
+  animation-duration: 3s;
+}
+
+@keyframes colorful {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+```
+~~~
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+      top: 0px;
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+    }
+    100% {
+      background-color: yellow;
+      top: 0px;
+    }
+  }
+</style>
+<div id="rect"></div>
+~~~
+
+## 不透明度(opacity)
+
+~~~
+<style>
+
+  #ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    50% {
+      left: 60%;
+     opacity:0.1;
+    }
+  }
+
+</style>
+
+<div id="ball"></div>
+~~~
+
+## animation属性
+
+- animation-name
+- animation-duration
+- animation-timing-function
+- animation-delay
+- animation-iteration-count
+- animation-direction
+
+| *[animation-name](https://www.w3school.com.cn/cssref/pr_animation-name.asp)* | 规定需要绑定到选择器的 keyframe 名称。。 |
+| ------------------------------------------------------------ | ---------------------------------------- |
+| *[animation-duration](https://www.w3school.com.cn/cssref/pr_animation-duration.asp)* | 规定完成动画所花费的时间，以秒或毫秒计。 |
+| *[animation-timing-function](https://www.w3school.com.cn/cssref/pr_animation-timing-function.asp)* | 规定动画的速度曲线。                     |
+| *[animation-delay](https://www.w3school.com.cn/cssref/pr_animation-delay.asp)* | 规定在动画开始之前的延迟。               |
+| *[animation-iteration-count](https://www.w3school.com.cn/cssref/pr_animation-iteration-count.asp)* | 规定动画应该播放的次数。                 |
+| *[animation-direction](https://www.w3school.com.cn/cssref/pr_animation-direction.asp)* | 规定是否应该轮流反向播放动画。           |
+
+### 1.animation-fill-mode
+
+forwards 保持高亮
+
+### 2.animation-iteration-count
+
+播放次数
+
+| 值       | 描述                     |
+| :------- | :----------------------- |
+| *n*      | 定义动画播放次数的数值。 |
+| infinite | 规定动画应该无限次播放。 |
+
+### 2.animation-timing-function
+
+| linear                        | 动画从头到尾的速度是相同的。                                 | [测试](https://www.w3school.com.cn/tiy/c.asp?f=css_animation-timing-function) |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ease                          | 默认。动画以低速开始，然后加快，在结束前变慢。               | [测试](https://www.w3school.com.cn/tiy/c.asp?f=css_animation-timing-function&p=2) |
+| ease-in                       | 动画以低速开始。                                             | [测试](https://www.w3school.com.cn/tiy/c.asp?f=css_animation-timing-function&p=3) |
+| ease-out                      | 动画以低速结束。                                             | [测试](https://www.w3school.com.cn/tiy/c.asp?f=css_animation-timing-function&p=4) |
+| ease-in-out                   | 动画以低速开始和结束。                                       | [测试](https://www.w3school.com.cn/tiy/c.asp?f=css_animation-timing-function&p=5) |
+| cubic-bezier(*n*,*n*,*n*,*n*) | 在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。 | https://www.jianshu.com/p/d999f090d333  详细解析             |
+
+## **使用 audio 元素提高音频内容的可访问性**
+
+```
+<body>
+ <header>
+  <h1>Real Coding Ninjas</h1>
+ </header>
+ <main>
+    <p>A sound clip of Zersiax's screen reader in action.</p>
+<audio id="meowClip" controls>
+ <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg">
+</audio>
+ </main>
+</body>
+```
+
+## accesskey+ 属性== Alt + accessKey
+
+用于指定激活元素或者使元素获得焦点的快捷键
+
+```
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<a href="http://www.w3school.com.cn/html/" accesskey="h">HTML 教程</a><br />
+<a href="http://www.w3school.com.cn/css/" accesskey="c">CSS 教程</a>
+
+<p><b>注释：</b>请使用Alt + <i>accessKey</i> (或者 Shift + Alt + <i>accessKey</i>) 来访问带有指定快捷键的元素。</p>
+
+</body>
+</html>
+
+
+```
+
+## tabindex   (tab 键顺序)
+
+可以规定tab指定元素的顺序 
+
+| 值       | 描述                                      |
+| :------- | :---------------------------------------- |
+| *number* | 规定元素的 tab 键控制次序（1 是第一个）。 |
+
+## **创建一个媒体查询**
+
+下面是一个媒体查询的例子，当设备宽度小于或等于 `100px` 时返回内容：
+
+```css
+@media (max-width: 100px) { /* CSS Rules */ }
+```
+
+以下定义的媒体查询，是当设备高度大于或等于 `350px` 时返回内容：
+
+```css
+@media (min-height: 350px) { /* CSS Rules */ }
+```
+
+## 视窗单位 **排版根据设备尺寸自如响应**
+
+- `vw`：如 `10vw` 的意思是视窗宽度的 10%。
+- `vh：` 如 `3vh` 的意思是视窗高度的 3%。
+- `vmin：` 如 `70vmin` 的意思是视窗的高度和宽度中较小一个的 70%。
+- `vmax：` 如 `100vmax` 的意思是视窗的高度和宽度中较大一个的 100%。
+
+
+
+## **flex-direction 属性创建一个**行
+
+ `display: flex` 属性可以让它变成 flex 容器， 然后可以让元素的项目排列成行或列。 
+
+只要给父元素添加 `flex-direction` 属性，并把属性值设置为 `row `或 `column`，即可横向排列或纵向排列它的所有子元素。 
+
+`flex-direction` 的其他可选值还有 `row-reverse` 和 `column-reverse`。
+
+## align-items与 justify-content
+
+`justify-content` 属性使 flex 子元素沿主轴排列。 行的主轴是水平线，列的主轴是垂直线。
+
+Flex 容器中，与主轴垂直的叫做 **cross axis（交叉轴）**。 行的交叉轴是垂直的，列的交叉轴是水平的。
+
