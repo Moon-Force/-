@@ -349,6 +349,165 @@ p {
 
  transform: skewX(24deg);
 
+<<<<<<< HEAD
+# ==css网格==
+
+## 创建一个css表格
+
+设置display:grid;就可以让html元素变成网格容器
+
+父元素称之为容器
+
+子元素称之为项
+
+## 使用grid-template-columns 添加多列
+
+两个50px代表两列50px的内容的排序
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 50px 50px;
+}
+```
+
+## 使用grid-template-rows添加多列
+```css
+.container {
+  display: grid;
+  grid-template-rows: 50px 50px;
+}
+```
+
+### **使用==repeat==函数减少重复**
+
+使用 `grid-template-columns` 或 `grid-template-rows` 定义网格结构时，你需要为添加的每一行或每一列都输入一个值。
+
+如果一个网格共有 100 行且每行高度相同， 那我们就需要输入 100 个值，这显然不太实际。 为此，更好的方式是使用 `repeat` 方法指定行或列的重复次数，后面加上逗号以及需要重复的值。
+
+### **使用 ==minmax== 函数限制项目大小**
+
+此外，内置函数 `minmax` 也可用于设置 `grid-template-columns` 和 `grid-template-rows` 的值。 它的作用是在网格容器改变大小时限制网格项的大小。 为此，你需要指定网格项允许的尺寸范围。 例如：
+
+```css
+grid-template-columns: 100px minmax(50px, 200px);
+```
+
+在上面的代码中，我们通过 `grid-template-columns` 添加了两列，第一列宽度为 100px，第二列宽度最小值是 50px，最大值是 200px。
+
+## **使用 ==auto-fill== 创建弹性布局**
+
+repeat 方法带有一个名为自动填充（auto-fill）的功能。 它的功能是根据容器的大小，尽可能多地放入指定大小的行或列。 你可以通过结合 `auto-fill` 和 `minmax` 来更灵活地布局。
+
+```css
+repeat(auto-fill, minmax(60px, 1fr));
+```
+
+上面的代码效果是这样：首先，列的宽度会==随容器大小改变==。其次，只要容器宽度==不足以插入一个宽为 60px 的列==，当前行的所有列就都会一直==拉伸==。请自己调整宽度，动手试一下就不难理解了。 **注意：** 如果容器宽度不足以将所有网格项放在同一行，余下的网格项将会移至新的一行。
+
+## 使用==auto-fit==创建弹性布局
+
+跟auto-fill的
+
+### 行列的大小
+
+在 CSS 网格中，可以使用绝对单位（如 `px`）或相对单位（如 `em`）来定义行或列的大小。 下面的单位也可以使用：
+
+`fr`：设置列或行占剩余空间的比例，
+
+`auto`：设置列宽或行高自动等于它的内容的宽度或高度，
+
+`%`：将列或行调整为它的容器宽度或高度的百分比，
+
+```css
+grid-template-columns: auto 50px 10% 2fr 1fr;
+```
+
+这段代码添加了五个列。 第一列的宽与它的内容宽度相等；第二列宽 50px；第三列宽是它容器的 10%；最后两列，将剩余的宽度平均分成三份，第四列占两份，第五列占一份。
+
+ ~~~css
+ grid-template-columns: 1fr 100px 2fr
+ ~~~
+
+ 这段代码添加了三个列，每列宽度分别为 ：1fr 100px 2fr
+
+## **grid-column-gap 创建多列之间的间距**
+
+```css
+grid-column-gap:20px; 给列之间添加20px的间距
+```
+
+```css
+grid-row-gap:5px; 给行之间添加5px的间距
+```
+
+```css
+ grid-gap:10px 20px; 行间距为10px 列间距20px;
+```
+
+##  grid-row 和grid-columns
+
+```css
+grid-column: 1 / 3;会让网格项从左侧第一条线开始到第三条线结束，占用两列
+```
+
+## 使用justify-self水平(横向)对齐项目
+
+关于网络格的==横向==对齐排列
+
+`start`：使内容在单元格左侧对齐，
+
+`center`：使内容在单元格居中对齐，
+
+`end`：使内容在单元格右侧对齐，
+
+## 使用align-self垂直对齐项目
+
+关于网格项的==纵向==对齐排列
+
+`start`：使内容在单元格顶端对齐，
+
+`center`：使内容在单元格中对齐，
+
+`end`：使内容在单元格底端对齐，
+
+## 将网格划分为区域模板（ ==grid-template-areas==）
+
+可以将网格中的一些单元格组成成一个区域，并为该区域指定一个自定义名称
+
+```css
+grid-template-areas:
+  "header header header"
+  "advert content content"
+  "advert footer footer";
+```
+
+上面的代码将网格单元格分成四个区域：`header`、`advert`、`content` 和 `footer`。 每个单词代表一个单元格，每对引号代表一行。
+
+### 使用grid-area 属性将项目放置在网格区域中
+
+```css
+.item1 {
+  grid-area: header;
+}
+```
+
+class 为 `item1` 的网格项就被放到了 `header` 区域里。 在这个示例中，网格项将占用第一行整行，因为这一整行都被命名为标题区域。
+
+```css
+item1 { grid-area: 1/1/2/4; }
+```
+
+这里使用了你之前学习的网格线编号来定义网格项的区域。 上例中数字代表这些值：
+
+```css
+grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+```
+
+因此，示例中的网格项将占用第 1 条水平网格线（起始）和第 2 条水平网格线（终止）之间的行，及第 1 条垂直网格线（起始）和第 4 条垂直网格线（终止）之间的列。
+
+## 
+=======
 ## **CSS 的关键帧和动画**
 
 animation-name 动画的名称
@@ -563,3 +722,4 @@ forwards 保持高亮
 
 Flex 容器中，与主轴垂直的叫做 **cross axis（交叉轴）**。 行的交叉轴是垂直的，列的交叉轴是水平的。
 
+>>>>>>> d4d6bf964534d39c253615cd1ba563a3f7890b61
