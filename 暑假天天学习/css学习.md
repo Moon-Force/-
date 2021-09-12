@@ -79,11 +79,17 @@ h2 {
 
  Border-radius:10px;
 
+# **用 border-radius 制作圆形图片**
+
+`border-radius` 的属性值设置为 `50%`。
+
+
+
 # 设置id
 
 除了 class 属性，每一个 HTML 元素都有一个 `id` 属性。
 
-使用 `id` 有几个好处：你可以通过 `id` 选择器来改变单个元素的样式。在稍后的课程中，你还会了解到如何在 JavaScript 里面用它来选择和操作元素。
+使用 `id` 有几个好处：你可以通过 `id` 选择器来改变单个元素的样式。
 
 根据规范，`id` 属性应是唯一的。 尽管浏览器并非必须执行这条规范，但这是广泛认可的最佳实践。 因此，请不要给多个元素设置相同的 `id`。
 
@@ -125,9 +131,9 @@ h2 {
 
  }
 
-# **使用属性选择器来设置元素的样式**通过
+# **使用属性选择器来设置元素的样式**==(改变单选,多选框的样式)==
 
-面的代码会改变所有 `type` 为 `radio` 的元素的外边距。
+代码会改变所有 `type` 为 `radio` 的元素的外边距。
 
 ```css
 [type='radio'] {
@@ -142,12 +148,28 @@ Class大于继承样式
 
 ID选择器大于Class
 
-内联样式大于ID选择器
+内联样式(
 
-**Important 的优先级最高**通过
+```
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+```
+
+)大于ID选择器
+
+**Important 的优先级最高**
 
 ```css
-color: red !important;
+.pink-text {
+    color: pink !important;
+  }
+```
+
+# **使用 RGB 值为元素上色**
+
+```css
+body {
+  background-color: rgb(255, 165, 0);
+}
 ```
 
 # **使用 text-align 属性创建视觉平衡**
@@ -726,3 +748,4 @@ Flex 容器中，与主轴垂直的叫做 **cross axis（交叉轴）**。 行�
 
 >>>>>>> d4d6bf964534d39c253615cd1ba563a3f7890b61
 
+# 
