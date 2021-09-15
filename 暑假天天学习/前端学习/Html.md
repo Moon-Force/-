@@ -365,7 +365,7 @@ scanner
 
 <input type="password" name="pwd">
 
-### 单选框
+### ==单选框==
 
 ```
     <!--
@@ -403,7 +403,7 @@ name是组别，如果组别不同则可以多选![image-20210730020717945](http
 
 **所以单选框必须保持name一致**
 
-### 多选框
+### ==多选框==
 
 爱好
     <input type="checkbox" value="sleep" name="hobby">睡觉
@@ -560,7 +560,7 @@ hidden隐藏
 <script type="text/javascript">
     var canvas=document.getElementById("MyCanvas");
     var pen=canvas.getContext("2d");
-    pen.rect(10,10,100,100);
+    pen.rect(10,10,100,100); 初始点为(10,10)宽和高为100的正方形
     pen.strokeStyle="blue";
     // pen.strokeRect(10, 10, 100, 200);一样效果
     pen.stroke();
