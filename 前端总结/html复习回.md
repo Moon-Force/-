@@ -171,6 +171,20 @@ img标签
 		</table>
 ~~~
 
+cellspacing代表两个格子中间的空白
+
+cellpadding表示单元格内容和单元格边框的距离
+
+### caption(表格标题)
+
+~~~
+<table>
+  <caption>表格b
+</table
+~~~
+
+
+
 
 
 ## ==文本框==
