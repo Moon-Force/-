@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		/* 子类选择器
+		
+		父类>子类
+		只适用于下一层,不适用于下两层,
+		如第二个div中<strong>被<p>包裹,那么就不会被选择
+		因为<strong>在<div>下两层
+		*/
+		div>strong{
+			color: #FF0000;
+		}
+		</style>
+	</head>
+	<body>
+		<div >
+			<strong>好日子</strong>
+			<strong>好日子</strong>
+			<strong>好日子</strong>
+		</div>
+		<div >
+			<!-- 第二层 -->
+			<p>
+				<!-- 第三层 -->
+			<strong>好日子</strong>
+			<strong>好日子</strong>
+			<strong>好日子</strong>
+			</p>
+		</div>
+	</body>
+</html>

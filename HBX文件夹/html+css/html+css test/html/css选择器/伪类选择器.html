@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		/* 未访问的链接 */
+		.one:link{
+			color: #0000FF;
+			text-decoration: none;
+		}
+		/* 已访问的链接 */
+		.one:visited{
+			color: #FF0000;
+		}
+		/*鼠标移动到链接上时*/
+		.one:hover{
+			color: #7FFF00;
+		}
+		/* 选定不松手时的链接 */
+		.one:active{
+			color: aquamarine;
+			background-color: cyan;
+			border: 2px solid #0000FF;
+		}
+		/* 未访问的链接 */
+		a:link{
+			color: #aa0000;
+			text-decoration: none;
+		}
+		/* 已访问的链接 */
+		a:visited{
+			color: #55aaff;
+		}
+		/*鼠标移动到链接上时*/
+		a:hover{
+			color: #ffaaff;
+		}
+		/* 选定不松手时的链接 */
+		a:active{
+			color: aquamarine;
+			background-color: cyan;
+			border: 2px solid #0000FF;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<h3>用类名加伪类选择</h3>
+		<a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp" class="one">伪类选择详情</a>
+		<h3>标签名加伪类选择</h3>
+		<a href="https://www.cnblogs.com/qianguyihao/p/8280814.html" class="two">伪类选择详情2</a>
+	</body>
+</html>

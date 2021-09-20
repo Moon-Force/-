@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- base 默认网页跳转方式 -->
+		<base target="_blank" />
+		<style>
+		h2[title]{
+			color: #00FFFF;
+			title
+		}
+		a[href]{
+		color: #bf9c1c;
+		}
+		/* 图片选择器 */
+		img[title="百度"]{
+			border: 1px dashed #FF0000;
+		}
+		/* 选择有特定属性值的元素 
+		且不能相差丝毫
+		如下方,多个[title="属性选择器1"]便会失效
+		*/
+	   a[href="https://www.w3school.com.cn/css/css_selector_attribute.asp"][title="属性选择器"][class="skyblue"]{
+		   color: skyblue;
+	   }
+	   /* 根据部分属性值选择 */
+	  p[class~=important]{
+		  color: #FF0000;
+	  }
+	  /* 字符串匹配属性选择器 
+		^="def" "def"开头的所有元素
+		$="def" "def"结尾的所有元素
+		*="def" 子串包含"def"的所有元素
+	  */
+	  h1[title^="def"]{
+		  color: aqua;
+	  }
+	  h1[title$="def"]{
+		  color: #BF9C1C;
+	  }
+	  [title*="def"]{
+		  color: chartreuse;
+	  }
+		</style>
+	</head>
+	<body>
+		<h3>简单属性选择器</h3>
+		<a href="css后代选择器.html" >后代选择器</a>
+		<h2 title="你好世界">你好世界</h2>
+		<h3 title="你好世界">垃圾的世界</h3>
+		<h3>图片属性选择器</h3>
+		<img src="../../img/百度.png" title="百度">
+		<h3>特定属性值</h3>
+		<a href="https://www.w3school.com.cn/css/css_selector_attribute.asp" title="属性选择器" class="skyblue">属性选择器详解</a><br />
+		<h3>部分选择器</h3>
+		<p class="important warning">This is a paragraph.</p>
+		<p class="important">This is a paragraph.</p>
+		
+		<h3>字符串匹配属性选择器</h3>
+		<div>
+			<h1 title="defstart">以def开头</h1>
+			<h1 title="enddef">以def结尾</h1>
+			<h1 title="includedefworld">带有def的字符串</h1>
+			
+		</div>
+	</body>
+</html>
