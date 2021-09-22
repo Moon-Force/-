@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>权重的叠加</title>
+		<style>
+		.nav a{
+			color: red;
+		}
+		/* 会显示红色而不会是蓝色 
+			因为.nav a 是一个类选择加标签选择 0,0,1,0+0,0,0,1=0,0,1,1
+		而.first只有0,0,1,0
+		    
+		*/
+		.first{
+			color: #0000FF;
+		}
+		/* 
+		 .nav .first{
+			 color:#0000FF;
+		 }
+		 可以,因为两个类选择器的权重为
+		 0,0,2,0
+		 */
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<a href="#" class="first">垃圾</a>
+			<a href="#">垃圾</a>
+			<a href="#">垃圾</a>
+			<a href="#">垃圾</a>
+		</div>
+	</body>
+</html>
