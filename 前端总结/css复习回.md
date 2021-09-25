@@ -475,7 +475,7 @@ background-repeat:no-repeat;
 | 垂直方向重复       | background-repeat: repeat-y   |
 | 只显示一次背景图像 | background-repeat: no-repeat; |
 
-#### 背景图片的位置
+#### 背景图片的位置(position)
 
 https://www.w3school.com.cn/cssref/pr_background-position.asp
 
@@ -513,3 +513,128 @@ https://www.cnblogs.com/cnblogs-jcy/p/8574177.html
 2. 相同权重下,采取后者优先的原则
 3. css属性后面加 !important 时，无条件绝对优先
 
+# 盒子模型
+
+## 边框(border)
+
+| 属性         | 作用           |
+| ------------ | -------------- |
+| border-width | 定义边框的粗细 |
+| border-style | 边框的样式     |
+| border-color | 边框颜色       |
+
+- 边框的样式
+  - none:无边框
+  - solid:边框为单实线(默认)
+  - dashed:边框为虚线
+  - dotted:边框为点线
+
+## 表格的细线边框
+
+  使表格两单元格之间,两边框合并
+
+1. cellspacing="0"
+2. 通过css
+
+css方法
+
+~~~
+<style type="text/css">
+	table{
+	      border-collapse: collapse;
+		}
+</style>
+~~~
+
+## 内边距
+
+控制边框和内容的距离
+
+## 外边距
+
+控制盒子和盒子之间的距离
+
+ ### 块级盒子居中
+
+ 使盒子不论网页放大,还是缩小,内容都居中对齐
+
+- 块级盒子实现水平居中
+
+  - 盒子必须指定宽度(width)
+
+  - 左右外边距都为auto
+
+    ~~~
+    width:xxx px
+    margin:auto auto;
+    ~~~
+
+## 文字居中和盒子居中
+
+==文字居中==text-align:center
+
+能使行内,行内块元素居中
+
+==margin==:使盒子居中
+
+## 清除默认边距
+
+~~~ 
+*{
+
+padding:0;
+
+margin:0;
+
+}
+~~~
+
+## 垂直的外边距合并
+
+/* 垂直外边距会取最大值 */
+
+假设两个块之间,一个margin-bottom: 100px;一个margin-top: 50px;
+
+则外边距会取100px,而不会150px
+
+~~~
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.top{
+				width: 100px;
+				height:100px;
+				background-color: #55ff7f;
+				margin-bottom: 100px;
+			}
+			.bottom{
+				margin-top: 50px;
+				width: 100px;
+				height:100px;
+				background-color: #0000FF;
+			}
+			/* 垂直外边距会取最大值 */
+		</style>
+	</head>
+	<body>
+		<div class="top"></div>
+		<div class="bottom"></div>
+	</body>
+</html>
+~~~
+
+## 背景图片和插入图片的区别
+
+背景图片用 ==background-position==来确定图片的位置
+
+插入图片只能使用盒模型
+
+~~~
+	.icon img{
+				vertical-align: middle;
+				margin: auto;
+			}
+~~~

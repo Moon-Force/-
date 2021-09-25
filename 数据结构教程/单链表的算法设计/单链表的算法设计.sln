@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "单链表的算法设计", "单链表的算法设计.vcxproj", "{B3213821-72AE-4034-AF15-19B5021F4E99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Debug|x64.ActiveCfg = Debug|x64
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Debug|x64.Build.0 = Debug|x64
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Debug|x86.ActiveCfg = Debug|Win32
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Debug|x86.Build.0 = Debug|Win32
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Release|x64.ActiveCfg = Release|x64
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Release|x64.Build.0 = Release|x64
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Release|x86.ActiveCfg = Release|Win32
+		{B3213821-72AE-4034-AF15-19B5021F4E99}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {271A8F28-5DA3-499A-9224-E88966589381}
+	EndGlobalSection
+EndGlobal
