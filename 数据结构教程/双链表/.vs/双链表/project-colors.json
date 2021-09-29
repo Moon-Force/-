@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5e6ee3e5-2377-49ce-905d-37d2f5c6c9f4": {
+      "ProjectGuid": "5e6ee3e5-2377-49ce-905d-37d2f5c6c9f4",
+      "DisplayName": "双链表",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

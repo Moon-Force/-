@@ -486,7 +486,7 @@ https://www.w3school.com.cn/cssref/pr_background-position.asp
 | x% y%(有顺序)             | 第一个值是水平位置，第二个值是垂直位置。左上角是 0% 0%。右下角是 100% 100%。如果您仅规定了一个值，另一个值将是 50%。 |
 | xpos ypos                 | 第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果您仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。 |
 
-#### 背景附着
+#### 背景附着(background-attachment)
 
 https://www.cnblogs.com/Renyi-Fan/p/12300232.html
 
@@ -638,3 +638,99 @@ margin:0;
 				margin: auto;
 			}
 ~~~
+
+# 浮动
+
+## 插入环绕图片
+
+~~~
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		img{
+		/* 会使图片脱离 */
+		float: left;
+		width: 100px;
+		height: 100px ;
+		}
+		</style>
+	</head>
+	<body>
+<p>
+
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+<img src="../../img/播放按钮.jpg" />
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p>
+	</body>
+</html>
+
+
+~~~
+
+## 使盒子可以脱离标准流单独存在
+
+可以使多个盒子并排,如果宽度大于父级盒子,则会单独新开一排
+
+
+
+## 消除浮动
+
+==前提==:父级盒子没有给予高度
+
+### 为啥要消除浮动
+
+- 由于浮动元素不再占用原文档流的位置,会对后面的元素排版产生影响
+- 准确来说,不是消除浮动,而是清楚浮动后造成的影响
+
+### 清除浮动的本质
+
+**清除浮动主要为了解决父级元素因为子级浮动引起内部高度为0的问题**
+
+### 清除浮动的方法
+
+#### 额外标签法
+
+在所有浮动元素的下方添加一个
+
+~~~
+			<div class="one"></div>
+			<div class="two"></div>
+			<div style="clear: both;"></div>
+~~~
+
+#### 给父级添加overflow
+
+~~~
+.top{
+	width: 500px;
+	background-color: pink;
+	overflow: hidden;
+	}
+~~~
+
+#### 伪元素法
+
+~~~
+.top::after{
+ content="";
+ display:block;
+ height:0;
+ visibility:hidden;
+ clear:both;
+}
+~~~
+
+
+

@@ -32,6 +32,16 @@
 <h2 class="red-text">CatPhotoApp</h2>
 ~~~
 
+同时使用选定个class
+
+~~~
+.nav .user{
+
+}
+~~~
+
+
+
 # 更改文字大小
 
 ```css
