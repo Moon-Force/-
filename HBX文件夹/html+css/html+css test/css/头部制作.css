@@ -64,3 +64,74 @@ li{
 	margin-left: 30px;
 	font-size: 14px;
 }
+.banner{
+	height: 420px;
+	background: url(../img/学成在线.png) #111669 no-repeat top center;
+}
+.subnav{
+	float: left;
+	width: 150px;
+	height: 420px;
+	background-color: rgba(13,13,73, .3);
+	padding: 0 20px;
+}
+.subnav a{
+	color:#E9E5F9;
+	text-decoration: none;
+	font-size: 14px;
+}
+.subnav a:hover{
+	color: #AA0000;
+}
+.subnav li{
+	height: 45px;
+	line-height: 45px;
+}
+.subnav span{
+	float: right;
+}
+.cource {
+	float: right;
+	width:228px;
+	height: 300px;
+	margin-top: 50px;
+	background-color: #FFFFFF;
+}
+.cource-hd{
+	height: 48px;
+	background-color: #94CBE9;
+	color: #EFFBFC;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 48px;
+}
+.cource-bd{
+	padding: 0 15px;
+}
+.cource-bd ul{
+	padding-top: 10px;
+}
+.cource-bd li{
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+}
+.cource-bd li h4{
+	font-size: 16px;
+	color: #4e4e4e;
+}
+.cource-bd li p{
+	font-size: 12px;
+	color: #BCBEBB;
+}
+.all{
+	display: block;
+	height: 38px;
+	border: 1px #708CB4 solid;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 38px;
+	margin-top: 10px;
+}
