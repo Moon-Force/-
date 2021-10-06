@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c5a16973-c100-483b-b797-18de1ed5da4f": {
+      "ProjectGuid": "c5a16973-c100-483b-b797-18de1ed5da4f",
+      "DisplayName": "顺序栈",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位</title>
+		<style> 
+		.border{
+			position: relative;
+			width: 500px;
+			height: 300px;
+			margin: 100px auto;
+			padding: 10px;
+			border: 1px #DDDDDB solid;
+		}
+		.recommend{
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.goods{
+			width: 500px;
+			height: 300px;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="border">
+			<img src="../../img/今日推荐.jpg" class="recommend">
+			<img src="../../img/哈根达斯.jpeg" class="goods">
+		</div>
+	</body>
+</html>

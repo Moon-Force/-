@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>堆叠顺序</title>
+		
+		<style>
+		.one,.two,.three{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+		}
+		.one{
+			background-color: #000000;
+			
+		}
+		/* 堆叠顺序 */
+		.one{
+			z-index: 2;
+		}
+		.two{
+			z-index: 1;
+		}
+		.two{
+			background-color: red;
+			top:50px;
+			left: 50px;
+		}
+		.three{
+			background-color: #0000FF;
+			top:100px;
+			left: 100px;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="one"></div>
+		<div class="two"></div>
+		<div class="three"></div>
+	</body>
+</html>

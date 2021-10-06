@@ -10,12 +10,23 @@ a{
 }
 body{
 	background-color: #F3F5F7;
+
 }
 /* 版心 */
 .w{
-	height: 3000px;
 	width: 1200px;
 	margin:  auto;
+}
+.clearfix::before,
+.clearfix::after{
+	content: "";
+	display: table;
+}
+.clearfix::after{
+	clear: both;
+}
+.clearfix{
+	*zoom: 1;
 }
 .header{
 	height: 42px;
@@ -217,4 +228,54 @@ float: right;
 }
 .box-bottom li p span{
 	color: #FF782F;
+}
+.footer{
+	height: 380px;
+	padding-top: 35px;
+	background-color: #FFFFFF;
+}
+.footer-left{
+	float: left;
+	width: 420px;
+	height: 148px;
+}
+.footer-left p{
+	color: #6C91B4;
+	width: 420px;
+	height: 32px;
+	font-size: 12px;
+	margin: 20px 0 15px 0;
+}
+.footer-left .app{
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    font-size: 16px;
+}
+.footer-rigth{
+	width: 540px;
+	height: 131px;
+	float: right;
+}
+.footer-rigth dl{
+	float: left;
+	margin-left: 100px;
+}
+.footer-rigth dl dt{
+	
+	    font-size: 16px;
+	    color: #333;
+	    margin-bottom: 5px;
+	
+}
+.footer-rigth  a{
+	    font-size: 12px;
+	    color: #333;
+}
+.footer-rigth  a:hover{
+		color: #0055ff;
 }
