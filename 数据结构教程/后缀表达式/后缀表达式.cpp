@@ -13,11 +13,16 @@ void trans(char* exp, char postexp[]) {
 			exp++;
 			break;
 		case ')':
-			Pop(Optr, e);
-			while (e != '(') {
-				postexp[i++] = e;
-				Pop(Optr, e);
-			}
+			while (!StackEmpty(Optr)) {
+				GetTop(Optr, e);
+				if (e != '(') {
+					postexp[i++] = e;
+					Pop(Optr, e);
+				}
+				else {
+					Pop(Optr, e);
+				}
+		}
 			exp++;
 			break;
 		case '+':
@@ -26,12 +31,12 @@ void trans(char* exp, char postexp[]) {
 				GetTop(Optr, e);
 				if (e != '(') {
 					postexp[i++] = e;
-					Pop(Optr, e);
+					Pop(Optr,e);
 				}
 				else {
 					break;
 				}
-		}
+			}
 			Push(Optr,*exp);
 			exp++;
 			break;

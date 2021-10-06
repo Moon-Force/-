@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		.hidden{
+			position: relative;
+			display: inline-block;
+		}
+		.hidden-content{
+			display: none;
+			position: absolute;
+			background-color: pink;
+			padding: 12px 16px;
+		}
+		.hidden:hover .hidden-content{
+			display: block;
+		}
+		
+		
+		</style>
+	</head>
+	<body>
+		<div class="hidden">
+		把鼠标移到我上面
+		<div class="hidden-content">HELLO WORLD</div>
+		</div>
+	</body>
+</html>
