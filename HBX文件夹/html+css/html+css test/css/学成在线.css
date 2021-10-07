@@ -185,6 +185,11 @@ body{
 .goodbox{
 	margin-top: 15px;
 }
+.goodbox .hot {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+}
 .box-top{
 	height: 60px;
 	line-height: 60px;
@@ -202,6 +207,7 @@ float: right;
 	width: 1215px;
 }
 .box-bottom li{
+	position: relative;
 	float: left;
 	width: 228px;
 	height: 270px;
@@ -228,7 +234,7 @@ float: right;
 .footer{
 	height: 380px;
 	padding-top: 35px;
-	background-color: #ff55ff;
+	background-color: #ffffff;
 }
 .footer-left{
 	float: left;
@@ -274,4 +280,13 @@ float: right;
 }
 .footer-rigth  a:hover{
 		color: #0055ff;
+}
+.sidenav{
+	position: fixed;
+	left: 50%;
+	top: 100px;
+	margin-left: -720px;
+	width: 100px;
+	height: 400px;
+	background-color: pink;
 }
