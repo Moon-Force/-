@@ -25,7 +25,7 @@ bool Push(SqStack*& s, ElemType e) {
 	s->data[s->top] = e;
 	return true;
 }
-bool  Pop(SqStack*& s, ElemType e) {
+bool  Pop(SqStack*& s, ElemType &e) {
 	if (s->top == -1) {
 		return false;
 	}
