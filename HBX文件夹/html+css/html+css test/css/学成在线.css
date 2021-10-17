@@ -63,6 +63,7 @@ body{
 	width: 50px;
 	height: 42px;
 	background-image: url(../img/搜索.png);
+	cursor: pointer;
 	background-size: 100% 100%;
 	background-repeat: repeat;
 }
@@ -73,6 +74,7 @@ body{
 	height: 40px;
 	border-right: none;
 	padding-left: 20px;
+	outline: none;
 }
 .user{
 	float: left;

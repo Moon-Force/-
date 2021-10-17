@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2a5cc16c-7acd-402b-b6a1-8603a1dfdc28": {
+      "ProjectGuid": "2a5cc16c-7acd-402b-b6a1-8603a1dfdc28",
+      "DisplayName": "串的暴力匹配",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
