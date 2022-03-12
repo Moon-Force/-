@@ -8,7 +8,6 @@ public class LibraryManager {
 		//
     int num;
 	do {
-
 		Scanner scanner = new Scanner(System.in);
 		num= scanner.nextInt();
 		switch (num) {
